@@ -5,11 +5,10 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "concurrently 'npm run lib:watch' 'npm run docs'",
-    "start:prod": "concurrently 'npm run lib:watch' 'npm run docs:prod'",
     "lib": "babel src/lib -d lib",
     "lib:watch": "babel src/lib -w -d lib",
     "docs": "webpack-dev-server --mode development",
-    "docs:prod": "webpack -p --mode production"
+    "build": "webpack -p --mode production"
   },
   "keywords": [],
   "license": "MIT",
